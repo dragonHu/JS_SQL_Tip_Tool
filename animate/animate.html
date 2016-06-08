@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" http-equiv="X-UA-Compatible" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" required>
+    <title>Animate动画</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <button id="testAnimate">testAnimate</button>
+    <div class="animation_container">
+        <button id="testbtn1" data-animation="bounce">胡</button>
+        <button id="testbtn2" data-animation="flash">倪</button>
+        <button id="testbtn3" data-animation="pulse">斌</button>
+        <button id="testbtn4" data-animation="shake">shake</button>
+        <button id="testbtn5" data-animation="headShake">headShake</button>
+        <button id="testbtn6" data-animation="swing">swing</button>
+        <button id="testbtn7" data-animation="tada">tada</button>
+        <button id="testbtn8" data-animation="wobble">wobble</button>
+        <button id="testbtn9" data-animation="jello">jello</button>
+        <button id="testbtn10" data-animation="bounceIn">bounceIn</button>
+        <button id="testbtn11" data-animation="bounceInDown">bounceInDown</button>
+        <button id="testbtn12" data-animation="bounceInLeft">bounceInLeft</button>
+        <button id="testbtn15" data-animation="bounceOutDown">bounceOutDown</button>
+        <button id="testbtn16" data-animation="bounceOutLeft">bounceOutLeft</button>
+        <button id="testbtn17" data-animation="bounceOutUp">bounceOutUp</button>
+        <button id="testbtn18" data-animation="fadeIn">fadeIn</button>
+        <button id="testbtn19" data-animation="fadeInDown">fadeInDown</button>
+        <button id="testbtn20" data-animation="fadeInDownBig">fadeInDownBig</button>
+        <button id="testbtn21" data-animation="fadeInLeft">fadeInLeft</button>
+        <button id="testbtn22" data-animation="fadeInLeftBig">fadeInLeftBig</button>
+        <button id="testbtn23" data-animation="fadeInRight">fadeInRight</button>
+        <button id="testbtn24" data-animation="fadeInRightBig">fadeInRightBig</button>
+        <button id="testbtn25" data-animation="fadeInUp">fadeInUp</button>
+        <button id="testbtn26" data-animation="fadeInUpBig">fadeInUpBig</button>
+        <button id="testbtn27" data-animation="fadeOut">fadeOut</button>
+        <button id="testbtn28" data-animation="fadeOutDown">fadeOutDown</button>
+        <button id="testbtn29" data-animation="fadeOutDownBig">fadeOutDownBig</button>
+        <button id="testbtn30" data-animation="fadeOutLeft">fadeOutLeft</button>
+        <button id="testbtn31" data-animation="fadeOutLeftBig">fadeOutLeftBig</button>
+        <button id="testbtn32" data-animation="fadeOutRight">fadeOutRight</button>
+        <button id="testbtn33" data-animation="fadeOutUp">fadeOutUp</button>
+        <button id="testbtn34" data-animation="fadeOutUpBig">fadeOutUpBig</button>
+        <button id="testbtn35" data-animation="flipInX">flipInX</button>
+        <button id="testbtn36" data-animation="flipInY">flipInY</button>
+        <button id="testbtn37" data-animation="flipOutX">flipOutX</button>
+        <button id="testbtn38" data-animation="flipOutY">flipOutY</button>
+        <button id="testbtn39" data-animation="lightSpeedIn">lightSpeedIn</button>
+        <button id="testbtn40" data-animation="lightSpeedOut">lightSpeedOut</button>
+        <button id="testbtn41" data-animation="rotateIn">rotateIn</button>
+        <button id="testbtn42" data-animation="rotateInDownLeft">rotateInDownLeft</button>
+        <button id="testbtn43" data-animation="rotateInDownRight">rotateInDownRight</button>
+        <button id="testbtn44" data-animation="rotateInUpLeft">rotateInUpLeft</button>
+        <button id="testbtn45" data-animation="rotateInUpRight">rotateInUpRight</button>
+        <button id="testbtn46" data-animation="rotateOut">rotateOut</button>
+        <button id="testbtn47" data-animation="rotateOutDownLeft">rotateOutDownLeft</button>
+        <button id="testbtn48" data-animation="rotateOutDownRight">rotateOutDownRight</button>
+        <button id="testbtn49" data-animation="rotateOutUpLeft">rotateOutUpLeft</button>
+        <button id="testbtn50" data-animation="rotateOutUpRight">rotateOutUpRight</button>
+        <button id="testbtn51" data-animation="hinge">hinge</button>
+        <button id="testbtn52" data-animation="rollIn">rollIn</button>
+        <button id="testbtn53" data-animation="rollOut">rollOut</button>
+        <button id="testbtn54" data-animation="zoomIn">zoomIn</button>
+        <button id="testbtn55" data-animation="zoomInDown">zoomInDown</button>
+        <button id="testbtn56" data-animation="zoomInLeft">zoomInLeft</button>
+        <button id="testbtn57" data-animation="zoomInRight">zoomInRight</button>
+        <button id="testbtn58" data-animation="zoomInUp">zoomInUp</button>
+        <button id="testbtn59" data-animation="slideInDown">slideInDown</button>
+        <button id="testbtn60" data-animation="slideInLeft">slideInLeft</button>
+        <button id="testbtn61" data-animation="slideInRight">slideInRight</button>
+        <button id="testbtn62" data-animation="slideInUp">slideInUp</button>
+        <button id="testbtn63" data-animation="slideOutDown">slideOutDown</button>
+        <button id="testbtn64" data-animation="slideOutLeft">slideOutLeft</button>
+        <button id="testbtn65" data-animation="slideOutRight">slideOutRight</button>
+        <button id="testbtn66" data-animation="slideOutUp">slideOutUp</button>
+    </div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" async defer>
+(function() {
+    'use strict';
+    var doc = document,
+        mrHu = {
+            timeout: null
+        };
+    $.fn.extend({
+        animateCss: function(animationName) {
+            var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+            $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
+    //遍历dom
+    var animation_container = doc.querySelectorAll("button");
+    $("#testAnimate").click(function() {
+        var _this = $(this);
+        //_this.addClass("animated bounceOutLeft");
+        for (var i = 1; i < animation_container.length; i++) {
+            var thisdom = $(animation_container[i]);
+            thisdom.animateCss("infinite " + thisdom.data('animation').trim());
+            console.log();
+        }
+        mrHu.LDMsg("执行动画成功", 2000);
+    });
+    //创建一个msg提示
+    mrHu.LDMsg = function(msg, time) {
+        var doc = document,
+            _this = this,
+            body = doc.body,
+            cw = window.innerWidth,
+            ch = window.innerHeight,
+            LD_tip = doc.querySelector('.LD_tip_content');
+        if (LD_tip) {
+            LD_tip.innerHTML = msg;
+            LD_tip.style.display = "block";
+            LD_tip.className = "LD_tip_content animated fadeInUp";
+            //清除上初的计时器
+            if (this.timeout) {
+                clearTimeout(this.timeout);
+            }
+            hideDom(LD_tip);
+        } else {
+            var div = doc.createElement("div"),
+                text = doc.createTextNode(msg);
+            div.className = "LD_tip_content animated fadeInUp";
+            div.setAttribute('style', 'top:' + ch * 0.9 + 'px;left:' + (cw - 90) * 0.5 + 'px');
+            div.appendChild(text);
+            body.appendChild(div);
+            hideDom();
+        }
+        //注销tip
+        function hideDom(LD_tip) {
+            _this.timeout = setTimeout(function() {
+                LD_tip = LD_tip || doc.querySelector(".LD_tip_content");
+                LD_tip.className = "LD_tip_content animated fadeOutDown";
+            }, time);
+        }
+    }
+}());
+</script>
+
+</html>

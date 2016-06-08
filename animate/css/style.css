@@ -1,0 +1,24 @@
+.LD_tip_content {
+    font-size: 12px;
+    line-height: 24px;
+    position: absolute;
+    z-index: 999;
+    width: 80px;
+    height: auto;
+    padding: 0 10px;
+    text-align: center;
+    word-break: break-all;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: #55606d;
+}
+
+.animation_container {
+    height: 800px;
+    margin-top: 50px;
+    background: green;
+}
+.animation_container button{
+    margin:25px;
+}
