@@ -1,0 +1,1 @@
+ select * from @dfd.$f(fa,@

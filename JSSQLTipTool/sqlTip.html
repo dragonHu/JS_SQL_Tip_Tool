@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SQL语法查询</title>
+    <style>
+    .SQL_divlist {
+        position: absolute;
+        z-index: 999;
+        height: 200px;
+        width: 100px;
+        background: white;
+        border: 1px solid #ccc;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display:none;
+    }
+    
+    .SQL_divlist ul {
+        margin: 0px;
+        padding: 0px;
+        float: left;
+        list-style-type: none;
+    }
+    
+    .SQL_divlist ul li {
+        width: 164px;
+        height: 23px;
+        float: left;
+        text-indent: 10px;
+        line-height: 23px;
+        text-align: left;
+        color: #333333;
+        cursor: pointer;
+    }
+    .SQL_divlist ul li:hover{
+    	background:#e6e6e6;
+    }
+    ._indexclass{
+    	background:#e6e6e6;
+    }
+    </style>
+</head>
+
+<body>
+    <textarea rows="10" cols="60" id="sqltextarea"></textarea>
+    <br />
+    <button id="getsqlsentence">getsqlsentence</button>
+    <p id="result"></p>
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="SQLTip.js"></script>
+    <script>
+    SQLTip.init("#sqltextarea");
+    document.querySelector("#getsqlsentence").addEventListener('click',function(event) {
+    	/* Act on the event */
+    	document.querySelector("#result").innerHTML=SQLTip.returnSqlVal();
+    	//SQLTip.discope(); //内存回收
+    });
+    </script>
+</body>
+
+</html>
